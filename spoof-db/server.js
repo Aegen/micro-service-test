@@ -9,7 +9,10 @@ const HOST = '0.0.0.0';
 // App
 const app = express();
 app.get('/', (req, res) => {
-  res.send('Some data\n');
+  let output = {
+      data : 'Some data from the pretend database'
+  }
+  res.send( JSON.stringify(output) );
 });
 
 app.listen(PORT, HOST);
